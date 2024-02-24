@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
+.font-raleway{
+  font-family: "Raleway", sans-serif;
+}
+
+.font-inter{
+    font-family: "Inter", sans-serif;
+}
+
+.seat-btn{
+  background: #F7F8F8;
+  border-radius: 12px;
+  width: 80px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+.selected{
+  background: #1DD100 !important;
+}
