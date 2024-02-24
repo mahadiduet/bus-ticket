@@ -36,7 +36,7 @@
    </header>
    <!-- Banner Section -->
    <section class="banner">
-    <div class="bg-[url('/images/banner.png')] w-[1170px] h-[550px] mx-auto">
+    <div class="bg-[url('images/banner.png')] w-[1170px] h-[550px] mx-auto">
         <div class="flex flex-col gap-4 items-center pt-32">
             <h1 class="font-bold text-6xl text-white text-center font-raleway">End-to-End Travel with</h1>
             <h1 class="font-bold text-6xl text-[#1DD10066] text-center font-raleway">P Paribahan</h1>
@@ -125,12 +125,12 @@
             <p>Per Seat</p>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex gap-32">
         <div class="w-[600px]">
             <h2 class="font-raleway text-2xl font-semibold mb-3">Select your seat</h2>
             <div class="flex justify-between mt-3 mb-3">
-                <div class="flex"><img src="images/seat-gray.png" alt="" srcset=""> <span>Available - </span><span id="available-seat">40</span></div>
-                <div class="flex"><img src="images/seat-green-filled.png" alt="" srcset=""><span>Selected - </span><span id="selected-seat">0</span></div>
+                <div class="flex"><img src="images/seat-gray.png" alt="" srcset=""> <span>Available :&nbsp&nbsp </span><span id="available-seat">40</span></div>
+                <div class="flex"><img src="images/seat-green-filled.png" alt="" srcset=""><span>Selected :&nbsp&nbsp </span><span id="selected-seat">0</span></div>
             </div>
             <div class="text-red-800 font-bold text-2xl" id="error-massage"></div>
             <div class="flex justify-between">
@@ -229,8 +229,24 @@
                 </div>
             </div>
             <div>
-                <input type="text" placeholder="Have any coupon">
-                <button class="bg-[#1DD100] mt-8 rounded-md p-2 disabled:*">Apply</button>
+                <input id="coupon" type="text" placeholder="Have any coupon">
+                <button onclick="cuponApply()" class="bg-[#1DD100] mt-8 rounded-md p-2 disabled:*">Apply</button>
+            </div>
+            <div class="text-red-800 font-bold text-2xl" id="error-coupon"></div>
+            <div id="total" class="mt-6 mb-6">
+                <div class="flex justify-between bg-slate-300">
+                    <h1>Grand Total</h1>
+                    <h1 id="grand-total">0</h1>
+                </div>
+            </div>
+            <div>
+                <label class="mb-3" for="">Passenger Name*</label><br>
+                <input class="mb-3" type="text" placeholder="Enter your name"><br>
+                <label class="mb-3" for="">Phone Number*</label><br>
+                <input class="mb-3" type="text" placeholder="Enter your phone number"><br>
+                <label class="mb-3" for="">Email Id*</label><br>
+                <input class="mb-3" type="text" placeholder="Enter your email"><br>
+                <button onclick="next()" class="bg-[#1DD100] w-full py-2 rounded-md text-white">Next</button>
             </div>
         </div>
     </div>
